@@ -1,0 +1,7 @@
+android-proyecto/android/.gradle/
+android-proyecto/android/build/
+android-proyecto/android/app/build/
+android-proyecto/android/local.properties
+*.keystore
+*.jks
+.DS_Store

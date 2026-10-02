@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Los Zafios · Cómo instalar y publicar</title>
+<style>
+:root{--ink:#1a1238;--cream:#fff6e0;--red:#e2362f;--gold:#ffc83a}
+body{margin:0;background:#1a1238;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);line-height:1.5}
+.w{max-width:820px;margin:0 auto;padding:16px}
+.card{background:var(--cream);border:4px solid #000;border-radius:18px;box-shadow:0 6px 0 #000;padding:18px 20px;margin:16px 0}
+h1{font-family:Impact,sans-serif;color:var(--gold);text-shadow:3px 3px 0 #000;font-size:clamp(28px,6vw,44px);margin:10px 0 0;letter-spacing:1px}
+.sub{color:#fff;opacity:.85;margin:4px 0 0}
+h2{margin:0 0 6px;font-size:22px}
+.tag{display:inline-block;background:var(--gold);border:2px solid #000;border-radius:8px;padding:0 8px;font-weight:800;font-size:13px;margin-bottom:6px}
+ol li,ul li{margin:5px 0}
+code{background:#fff;border:1px solid #bbb;border-radius:5px;padding:0 5px;font-size:.92em}
+.warn{background:#ffe2e0;border-left:6px solid var(--red);padding:8px 12px;border-radius:8px}
+.ok{background:#e4ffe6;border-left:6px solid #2f9a4a;padding:8px 12px;border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #ccc;padding:6px;text-align:left;vertical-align:top}th{background:#fff}
+</style></head><body><div class="w">
+<h1>EL PLANETA DE LOS ZAFIOS</h1>
+<p class="sub">Paquete de la app · cómo jugar, instalar en el móvil y subir a Google Play</p>
+
+<div class="card"><span class="tag">Qué hay en el paquete</span>
+<table>
+<tr><th>Carpeta / archivo</th><th>Para qué sirve</th></tr>
+<tr><td><b>1_JUGAR_YA_El_Planeta_de_los_Zafios.html</b></td><td>El juego entero en un solo archivo. Se pasa por WhatsApp y se abre en el navegador (Chrome). Funciona sin internet.</td></tr>
+<tr><td><b>2_app_web_instalable/</b></td><td>La versión «app web» (con icono, pantalla completa y sin conexión). Se sube a una web gratis y se instala desde Chrome con «Instalar app».</td></tr>
+<tr><td><b>3_proyecto_android/</b></td><td>El proyecto de Android Studio ya configurado (horizontal, pantalla completa, icono, voz del narrador). De aquí sale el <b>APK</b> y el <b>AAB</b> para la Play Store.</td></tr>
+<tr><td><b>4_play_store/</b></td><td>Todo lo que pide la ficha de Google Play: icono 512, gráfico destacado 1024×500, 6 capturas, textos y política de privacidad.</td></tr>
+</table></div>
+
+<div class="card"><span class="tag">Opción A · Lo más rápido</span>
+<h2>Jugar ya (WhatsApp)</h2>
+<ol><li>Manda <b>1_JUGAR_YA_El_Planeta_de_los_Zafios.html</b> por WhatsApp.</li>
+<li>En el móvil, ábrelo con <b>Chrome</b> (si WhatsApp lo abre con otra cosa: «Abrir con… → Chrome»).</li>
+<li>Gira el móvil en horizontal y a jugar. El narrador usa la voz del propio móvil.</li></ol>
+</div>
+
+<div class="card"><span class="tag">Opción B · App en el móvil sin Play Store (gratis, 5 minutos)</span>
+<h2>Instalarla como app desde una web</h2>
+<ol>
+<li>En el ordenador entra en <b>app.netlify.com/drop</b> (gratis; te pide crear cuenta con el correo).</li>
+<li>Arrastra la carpeta <b>2_app_web_instalable</b> entera a la página. Te da una dirección tipo <code>https://algo.netlify.app</code> (puedes cambiarle el nombre, por ejemplo <code>loszafios.netlify.app</code>).</li>
+<li>Abre esa dirección en el móvil con Chrome → menú ⋮ → <b>«Instalar app»</b> o «Añadir a pantalla de inicio».</li>
+<li>Aparece el icono de <b>Los Zafios</b>. Se abre a pantalla completa y funciona sin internet.</li>
+</ol>
+<p class="ok">Pasar esa dirección por WhatsApp es la forma más cómoda de que la familia la instale.</p>
+</div>
+
+<div class="card"><span class="tag">Opción C · APK de Android (como una app de verdad)</span>
+<h2>Sacar el APK con Android Studio</h2>
+<ol>
+<li>Instala <b>Android Studio</b> (gratis, developer.android.com/studio) en un ordenador Windows o Mac.</li>
+<li>Abre Android Studio → <b>Open</b> → elige la carpeta <code>3_proyecto_android/android</code>.</li>
+<li>Espera a que termine el «Gradle sync» la primera vez (descarga cosas, unos minutos). Si te pide instalar el SDK o actualizar algo, acepta.</li>
+<li>Menú <b>Build → Build App Bundle(s) / APK(s) → Build APK(s)</b>. Cuando acabe, pulsa «locate»: el archivo es <code>app-debug.apk</code>.</li>
+<li>Pásalo al móvil (WhatsApp, cable o Drive) y ábrelo. Android pedirá permitir «instalar apps de origen desconocido»: acéptalo para ese caso.</li>
+</ol>
+<p class="warn">Ese APK sirve para instalarlo a mano en los móviles de la familia. Para la Play Store hace falta el archivo <b>AAB firmado</b> (Opción D).</p>
+<p><b>Si cambias el juego más adelante:</b> sustituye <code>3_proyecto_android/www/index.html</code> por el nuevo HTML y, con Node.js instalado, ejecuta en esa carpeta <code>npm install</code> y luego <code>npx cap sync android</code>. Después vuelve a compilar.</p>
+</div>
+
+<div class="card"><span class="tag">Opción D · Subirla a Google Play</span>
+<h2>Publicar en la Play Store</h2>
+<ol>
+<li><b>Cuenta de desarrollador:</b> en <b>play.google.com/console</b>, pago único de <b>25 $</b> y verificación de identidad (DNI).</li>
+<li><b>Archivo para Google:</b> en Android Studio, <b>Build → Generate Signed App Bundle / APK → Android App Bundle</b>. Crea una «key store» nueva.
+<p class="warn"><b>Guarda la key store y sus contraseñas en un sitio seguro.</b> Sin ellas no podrás actualizar nunca la app. Usa la variante <b>release</b>: el archivo es <code>app-release.aab</code>.</p></li>
+<li><b>Crea la app</b> en la Play Console: nombre «El Planeta de los Zafios», idioma español, tipo «Juego», gratuita.</li>
+<li><b>Ficha de la tienda:</b> copia los textos de <code>4_play_store/ficha_play_store.txt</code> y sube el icono, el gráfico destacado y las capturas de esa carpeta.</li>
+<li><b>Política de privacidad:</b> sube <code>4_play_store/privacidad.html</code> a una web (por ejemplo, junto a la de Netlify de la opción B) y pega la dirección donde te la piden. El juego no recoge ningún dato.</li>
+<li><b>Clasificación de contenido:</b> rellena el cuestionario con sinceridad: lenguaje soez, humor adulto y referencias a alcohol y drogas, <b>sin violencia realista ni sexo explícito</b>. Saldrá para adultos o adolescentes mayores (PEGI 16/18), como corresponde al «+18» del libro.</li>
+<li><b>Público objetivo:</b> mayores de 18. Anuncios: no. Acceso a datos: ninguno.</li>
+<li><b>Prueba cerrada obligatoria:</b> las cuentas personales nuevas tienen que hacer una prueba cerrada con <b>al menos 12 personas durante 14 días seguidos</b> antes de poder publicar para todos. Mete a la familia y a los amigos como testers con su Gmail.</li>
+<li>Pasados esos 14 días, solicita el acceso a producción y publica. Google tarda desde unas horas hasta unos días en revisarla.</li>
+</ol>
+<p class="ok"><b>Atajo sin Android Studio:</b> con la web de la opción B publicada, entra en <b>pwabuilder.com</b>, pega la dirección y elige «Package for stores → Android». Te genera el AAB firmado (y su key store) listo para subir a la Play Console. El juego es el mismo.</p>
+</div>
+
+<div class="card"><span class="tag">Ojo con esto</span>
+<ul>
+<li><b>Derechos:</b> el juego está basado en el libro de Marco Antonio. Si se publica, que sea con su visto bueno y figurando como autor (ya sale en el juego).</li>
+<li><b>Marcas:</b> en la ficha de la tienda <b>no pongas «Mario» ni «Sonic»</b> ni nombres de otros juegos: son marcas registradas y Google rechaza esas fichas. Usa «plataformas a toda velocidad», como en la ficha preparada.</li>
+<li><b>Narrador:</b> en la app de Android usa el motor de voz del móvil («Servicios de voz de Google»). Si no habla, en Ajustes → Accesibilidad → Salida de texto a voz, elige Google y descarga la voz en español. Se activa y desactiva con el botón 🗣️.</li>
+</ul></div>
+</div></body></html>
