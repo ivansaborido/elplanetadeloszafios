@@ -1,0 +1,55 @@
+FICHA PARA GOOGLE PLAY · EL PLANETA DE LOS ZAFIOS
+==================================================
+
+NOMBRE DE LA APP (máx. 30 caracteres)
+El Planeta de los Zafios
+
+DESCRIPCIÓN BREVE (máx. 80 caracteres)
+Plataformas a toda velocidad en el planeta más zafio del universo. +18
+
+DESCRIPCIÓN COMPLETA (máx. 4000 caracteres)
+En un mundo inventado todo es posible…
+
+Mercuriano es un pequeño planeta que orbita la Tierra a menos de diez kilómetros. Allí reina Grego I «Cagabolitas», el Comando cobra el 80 % de impuesto revolucionario, los veganos de Cerealia aguantan a Randy «Manteka», los jubilados de Jubilandia vigilan obras apoyados en la barandilla y los piratas calzonazos navegan el mar de Calzon Sea. Y todos están invitados (o no) a la boda real del año.
+
+El Planeta de los Zafios es el videojuego oficial del libro de humor de Marco Antonio Saborido Domínguez: un plataformas a toda velocidad con 10 capítulos que siguen la historia del libro.
+
+★ CORRE, RUEDA Y SALTA: inercia, acelerones en bola, muelles, aceleradores y bloques sorpresa.
+★ 8 PERSONAJES JUGABLES (y uno secreto): Saky «Liebre II», Vary «el Colitas», Blacky, Fali «el Capullo», el rey Grego I, Pelito Meado, Toño el barquero y Randy «Manteka». Cada uno con su velocidad, su salto y su habilidad: chistes que dejan tieso, pintura rosa palo, el ¡FLAMA POW!, el ¡Unga unga!, ver el futuro…
+★ MÓNTATE EN COSAS IMPOSIBLES: la Puch Cóndor de Don Pancho, el burro de Franky, la nave-pepino y la nave-nabo de la Brigada de Enterados.
+★ POWER-UPS ZAFIOS: el bocadillo de salchichón con tulipán, la flor de flama y el brebaje mágico.
+★ NARRADOR CON VOZ: el juego lee la historia de cada capítulo y pone voz a los personajes.
+★ MINIJUEGOS: vuela en la nave-nabo, pilota una avioneta sin gasolina y gana la final de la Vulgar Cup en la tanda de penaltis.
+★ JEFE FINAL: Antonio «Naruto» convertido en Súper Guerrero.
+★ ZAFIOPEDIA con todos los personajes del libro.
+★ Sin anuncios, sin compras y sin internet.
+
+Aviso: humor adulto, lenguaje soez y personajes ficticios. Cualquier parecido con la realidad será responsabilidad suya y de la persona que le suministra la sustancia.
+
+CATEGORÍA
+Juegos › Acción (o Arcade)
+
+ETIQUETAS SUGERIDAS
+plataformas, humor, aventura, español, andaluz
+
+DATOS DE CONTACTO
+Correo: (pon aquí el correo de contacto)
+
+CLASIFICACIÓN DE CONTENIDO (cuestionario)
+- Lenguaje soez: SÍ
+- Humor adulto o vulgar: SÍ
+- Referencias a alcohol/tabaco/drogas: SÍ (en el texto, en clave de humor)
+- Violencia: caricaturesca, sin sangre
+- Contenido sexual explícito: NO
+- Interacción entre usuarios / compras / anuncios / datos personales: NO
+
+PÚBLICO OBJETIVO
+Mayores de 18 años.
+
+SEGURIDAD DE LOS DATOS
+La app no recoge ni comparte ningún dato. Todo se guarda solo en el propio móvil (progreso del juego).
+
+GRÁFICOS INCLUIDOS EN ESTA CARPETA
+- icono-512.png             → Icono de la app (512×512)
+- grafico-destacado-1024x500.png → Gráfico destacado
+- capturas/*.png            → Capturas de pantalla del teléfono (1920×1080, horizontal)

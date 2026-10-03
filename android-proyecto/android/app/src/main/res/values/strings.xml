@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Los Zafios</string>
+    <string name="title_activity_main">El Planeta de los Zafios</string>
+    <string name="package_name">com.zafios.juego</string>
+    <string name="custom_url_scheme">com.zafios.juego</string>
+</resources>
